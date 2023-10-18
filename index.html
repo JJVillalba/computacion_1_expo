@@ -100,9 +100,11 @@
             <h2>Paquetes útiles de Python</h2>
           </section>
           <section>
-            <img src="./img/pandas.svg" />
-            Una herramienta de análisis y manipulación de datos rápida,
-            poderosa, flexible y fácil de usar
+            <img src="./img/pandas.svg" width="33%" />
+            <div>
+              Una herramienta de análisis y manipulación de datos rápida,
+              poderosa, flexible y fácil de usar
+            </div>
           </section>
           <section>
             <pre><code  data-trim data-line-numbers data-noescape>
@@ -131,10 +133,31 @@
             </code></pre>
           </section>
           <section>
-            <img src="./img/scipy.png" />
+            <img src="./img/plotly.png" width="33%" />
+            <div>
+              Una librería para hacer gráficos interactivos listos para
+              publicación.
+            </div>
           </section>
           <section>
-            <img src="./img/plotly.png" />
+            <pre><code data-line-numbers data-ln-start-from="11" data-line-numbers data-trim data-noescape>
+              import plotly.express as px
+
+              df = px.data.gapminder().query("country=='Canada'")
+              fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
+              fig.show()
+            </code></pre>
+          </section>
+          <section>
+            <img src="./img/newplot.png" />
+          </section>
+          <section>
+            <img src="./img/scipy.png" width="30%" />
+            <div>
+              Una librería que provee algoritmos para optimización integración,
+              interpolación, problemas de autovalores, ecuaciones algebraicas,
+              ecuaciones diferenciales, estadísticas y muchos otras más.
+            </div>
           </section>
         </section>
         <section>
@@ -142,13 +165,48 @@
             <h2>Paquetes útiles de R</h2>
           </section>
           <section>
-            <img src="./img/rmarkdown1.png" />
+            <div style="display: flex; text-align: left; align-items: center">
+              <img src="./img/tidyverse.png" width="90%" style="margin-right: 2rem;" />
+              <div>
+                Una colección de paquetes con criterios comunes de R diseñada
+                para la ciencia de datos, todos los paquetes que la componen
+                comparten filosofía, gramática y estructuras de datos.
+              </div>
+            </div>
           </section>
           <section>
-            <img src="./img/ggplot2.png" />
+            <ul>
+              <li>
+                <img src="./img/ggplot2.png" height="65px" />
+                Manipulación de datos
+              </li>
+              <li>
+                <img src="./img/ggplot2.png" height="65px" />
+                Carga de datos
+              </li>
+              <li>
+                <img src="./img/ggplot2.png" height="65px" />
+                Una mejor tabla de datos
+              </li>
+              <li>
+                <img src="./img/ggplot2.png" height="65px" />
+                Creación de gráficos
+              </li>
+            </ul>
           </section>
           <section>
-            <img src="./img/tidyverse.png" />
+            <div style="display: flex; text-align: left; align-items: center">
+              <img
+                src="./img/rmarkdown1.png"
+                width="70%"
+                style="margin-right: 2rem"
+              />
+              <div>
+                <strong>RMarkdown</strong> es una herramienta para convertir tus
+                análisis en documento, reportes, presentaciones y tableros de
+                alta calidad.
+              </div>
+            </div>
           </section>
         </section>
         <section>
