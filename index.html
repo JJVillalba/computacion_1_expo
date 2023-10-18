@@ -45,7 +45,7 @@
             <ul>
               <li>Aumentar las capacidades del lenguaje</li>
               <li>Para ahorrarnos trabajo</li>
-              <li>Si ya esta hecho para que hacerlo de nuevo</li>
+              <li>¿Si ya esta hecho para que hacerlo de nuevo?</li>
               <li>Seguramente alguien lo hizo mejor</li>
             </ul>
           </section>
@@ -63,7 +63,14 @@
             </div>
           </section>
           <section>
-            <h2>Instalación de paquetes en R (TODO)</h2>
+            <h2>Instalación de paquetes en R</h2>
+            <pre><code  data-trim data-line-numbers data-noescape>
+              # Instala tidyverse
+              install.packages("tidyverse")
+
+              # Importa tidyverse
+              library(tidyverse)
+            </code></pre>
           </section>
           <section>
             <div style="display: flex; text-align: left; align-items: center">
@@ -94,12 +101,40 @@
           </section>
           <section>
             <img src="./img/pandas.svg" />
+            Una herramienta de análisis y manipulación de datos rápida,
+            poderosa, flexible y fácil de usar
+          </section>
+          <section>
+            <pre><code  data-trim data-line-numbers data-noescape>
+              import pandas as pd
+
+              df2 = pd.DataFrame({
+                  "A": 1.0,
+                  "B": pd.Timestamp("20130102"),
+                  "C": pd.Series(1, index=list(range(4)), dtype="float32"),
+                  "D": np.array([3] * 4, dtype="int32"),
+                  "E": pd.Categorical(["test", "train", "test", "train"]),
+                  "F": "foo",
+              })
+            </code></pre>
+          </section>
+          <section>
+            <pre><code data-line-numbers data-ln-start-from="11" data-line-numbers data-trim data-noescape>
+              df2
+
+              Out[11]: 
+                  A          B    C  D      E    F
+              0  1.0 2013-01-02  1.0  3   test  foo
+              1  1.0 2013-01-02  1.0  3  train  foo
+              2  1.0 2013-01-02  1.0  3   test  foo
+              3  1.0 2013-01-02  1.0  3  train  foo
+            </code></pre>
           </section>
           <section>
             <img src="./img/scipy.png" />
           </section>
           <section>
-            <h2>Plotly</h2>
+            <img src="./img/plotly.png" />
           </section>
         </section>
         <section>
@@ -107,27 +142,81 @@
             <h2>Paquetes útiles de R</h2>
           </section>
           <section>
-            <h2>Tidyverse</h2>
+            <img src="./img/rmarkdown1.png" />
           </section>
           <section>
-            <h2>Algún otro (TODO)</h2>
+            <img src="./img/ggplot2.png" />
+          </section>
+          <section>
+            <img src="./img/tidyverse.png" />
           </section>
         </section>
         <section>
           <section>
-            <h2>LaTeX</h2>
+            <img src="./img/latex.png" />
           </section>
           <section>
             <h2>¿Qué es LaTeX?</h2>
+            Un sistema de composición de textos, orientado a la creación de
+            documentos escritos que presenten una alta calidad tipográfica. Por
+            sus características y posibilidades, es usado especialmente en la
+            creación de textos científicos.
           </section>
           <section>
             <h2>Documento de latex</h2>
+            <pre><code data-line-numbers data-trim data-noescape>
+                  \documentclass[10pt]{article}
+                  
+                  \begin{document}
+
+                  Hola mundo
+
+                  \end{document}
+            </code></pre>
+          </section>
+          <section>
+            <h2>Expresión en latex</h2>
+            <pre><code data-line-numbers data-trim data-noescape>
+              \documentclass{standalone}
+              
+              \begin{document}
+              \begin{equation}
+
+              \int_{a}^{b} f(x) \; dx 
+                = \lim _{n \to \infty}
+                \frac{b-a}{n}
+                \sum_{k=1}^{n} f \left( a+k \; {\frac {b-a}{n}} \right).
+                  
+              \end{equation}
+              \end{document}
+            </code></pre>
+          </section>
+          <section>
+            <h2>Expresión en latex</h2>
+            <img src="./img/equation.png" />
           </section>
           <section>
             <h2>Interfaz de linea de comandos</h2>
+            <div>
+              LaTeX cuenta con diversas opciones para ser utilizado desde
+              consola con utilidades como <strong> pdflatex</strong>,
+              <strong> latexmk</strong> entre tantas otras, sin embargo esto
+              puede resultar tedioso y por tanto pueden preferir otras
+              alternativas
+            </div>
           </section>
           <section>
-            <h2>TexMaker</h2>
+            <div style="display: flex; text-align: left">
+              <img
+                src="./img/texmaker.png"
+                style="width: 110%; object-fit: contain; margin-right: 2rem"
+              />
+              <div>
+                <strong>TexMaker</strong> es un editor de código abierto,
+                multiplataforma, que integra muchas herramientas necesarias para
+                desarrollar documentos con LaTeX, en una sola aplicación
+              </div>
+            </div>
           </section>
           <section>
             <img style="height: 10vh" src="./img/overleaf.svg" />
@@ -140,26 +229,8 @@
         </section>
         <section>
           <section>
-            <h2>Markdown</h2>
-          </section>
-          <section>
-            <h2>¿Qué es Markdown?</h2>
-          </section>
-          <section>
-            <h2>RMarkdown</h2>
-          </section>
-          <section>
-            <h2>RSWeaver</h2>
-          </section>
-        </section>
-        <section>
-          <section>
             <h2>Trabajando con estas herramientas</h2>
           </section>
-          <section></section>
-          <section></section>
-          <section></section>
-          <section></section>
         </section>
       </div>
     </div>
