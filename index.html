@@ -25,16 +25,40 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h3>
-            Interfaces y paquetes útiles en R y Python para el&nbsp;estadístico
-            y el&nbsp;actuario
-          </h3>
-          <ul style="column-count: 2; font-size: 1.4rem; list-style: none">
-            <li>Marite Marques Escobar</li>
-            <li>Odalis Deyanira Rodriguez Clemente</li>
-            <li>Johanna Elsirenny Alvarez Sanabria</li>
-            <li>José Julián Villalba Vasquez</li>
-          </ul>
+          <div style="position: relative">
+            <h3>
+              Interfaces y paquetes útiles en R y Python para
+              el&nbsp;estadístico y el&nbsp;actuario
+            </h3>
+            <ul style="column-count: 2; font-size: 1.4rem; list-style: none">
+              <li>Marite Marques Escobar</li>
+              <li>Odalis Deyanira Rodriguez Clemente</li>
+              <li>Johanna Elsirenny Alvarez Sanabria</li>
+              <li>José Julián Villalba Vasquez</li>
+            </ul>
+            <div
+              style="
+                position: absolute;
+                bottom: -10%;
+                left: 25%;
+                width: 50%;
+                height: 40%;
+              "
+            >
+              <img
+                src="./img/faces.png"
+                style="transform: translate(-150%, 110%) scale(1.8)"
+              />
+              <img
+                src="./img/ucv.svg"
+                style="transform: translate(60%, 110%) scale(1.8)"
+              />
+              <img
+                src="./img/ecca.png"
+                style="transform: translate(100%, 110%) scale(1)"
+              />
+            </div>
+          </div>
         </section>
         <section>
           <section>
@@ -101,14 +125,16 @@
           </section>
           <section>
             <h5>Herramientas para analizar datos:</h5>
+            <ul style="column-count: 2">
+              <li>Microsoft Power</li>
+              <li>Programa en</li>
+              <li>Programa en</li>
+              <li>SAS</li>
+              <li>Tableau Public</li>
+              <li>Rapid Miner</li>
+              <li>Apache Spark</li>
+            </ul>
           </section>
-          <section><h6>Microsoft Power BI</h6></section>
-          <section><h6>Programa en R</h6></section>
-          <section><h6>Programa en Python</h6></section>
-          <section><h6>SAS</h6></section>
-          <section><h6>Tableau Public</h6></section>
-          <section><h6>Rapid Miner</h6></section>
-          <section><h6>Apache Spark.</h6></section>
         </section>
         <section>
           <section>
@@ -146,6 +172,72 @@
               2  1.0 2013-01-02  1.0  3   test  foo
               3  1.0 2013-01-02  1.0  3  train  foo
             </code></pre>
+          </section>
+          <section class="bbbbb">
+            <h6>Un pequeño ejemplo</h6>
+            <table style="font-size: 1.6rem">
+              <tr>
+                <th>id</th>
+                <th>sobrevivió</th>
+                <th>clase</th>
+                <th>nombre</th>
+                <th>sexo</th>
+                <th>edad</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>3</td>
+                <td>Braund, Mr. Owen Harris</td>
+                <td>male</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+                <td>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</td>
+                <td>female</td>
+                <td>28</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>1</td>
+                <td>3</td>
+                <td>Heikkinen, Miss. Laina</td>
+                <td>female</td>
+                <td>26</td>
+              </tr>
+              <tr class="aaa">
+                <td><div class="test" /></td>
+                <td><div class="test" /></td>
+                <td><div class="test" /></td>
+                <td><div class="test" /></td>
+                <td><div class="test" /></td>
+                <td><div class="test" /></td>
+              </tr>
+            </table>
+            <span style="font-size: 1.4rem">
+              Datos de pasajeros del titanic, fuente
+              <a href="https://www.kaggle.com/c/titanic">kaggle</a>
+            </span>
+          </section>
+          <section>
+            <h6>Un pequeño ejemplo</h6>
+            <pre><code data-line-numbers data-ln-start-from="11" data-line-numbers data-trim data-noescape>
+              # Muestra las primeras 5 filas
+              titanic_data.head(5)
+
+              # Describe la data
+              titanic_data.head(5).describe()
+
+              # Extrae la columna edad
+              age = titanic_data["edad"]
+
+              # Extrae las columnas del dataframe cuyo valor de edad sea 
+              # mayor a 45
+              age = titanic_data["edad"][titanic_data["edad"]  > 45]
+          </code></pre>
           </section>
           <section>
             <img src="./img/plotly.png" width="33%" />
@@ -240,55 +332,7 @@
               text-align: center !important;
             }
           </style>
-          <section class="bbbbb">
-            <h6>Un pequeño ejemplo</h6>
-            <table style="font-size: 1.6rem">
-              <tr>
-                <th>id</th>
-                <th>sobrevivió</th>
-                <th>clase</th>
-                <th>nombre</th>
-                <th>sexo</th>
-                <th>edad</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>0</td>
-                <td>3</td>
-                <td>Braund, Mr. Owen Harris</td>
-                <td>male</td>
-                <td>22</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>1</td>
-                <td>1</td>
-                <td>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</td>
-                <td>female</td>
-                <td>28</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>1</td>
-                <td>3</td>
-                <td>Heikkinen, Miss. Laina</td>
-                <td>female</td>
-                <td>26</td>
-              </tr>
-              <tr class="aaa">
-                <td><div class="test" /></td>
-                <td><div class="test" /></td>
-                <td><div class="test" /></td>
-                <td><div class="test" /></td>
-                <td><div class="test" /></td>
-                <td><div class="test" /></td>
-              </tr>
-            </table>
-            <span style="font-size: 1.4rem">
-              Datos de pasajeros del titanic, fuente
-              <a href="https://www.kaggle.com/c/titanic">kaggle</a>
-            </span>
-          </section>
+
           <section>
             <h6>Un pequeño ejemplo</h6>
             <pre><code data-line-numbers >
@@ -377,14 +421,16 @@ passengers1 <- passengers %>%
             <h6>Importancia para la Estadística para presentar Informes</h6>
           </section>
           <section>
-            <h5>Software para presentar informes estadísticos:</h5>
+            <h5>Software para presentar informes estadownloaddísticos:</h5>
+            <ul style="column-count: 2; column-gap: 100%">
+              <li>SPSS</li>
+              <li>Microsoft Excel</li>
+              <li>SAS</li>
+              <li>Tableau Public</li>
+              <li>Stata</li>
+              <li>Nvivo.</li>
+            </ul>
           </section>
-          <section><h6>SPSS</h6></section>
-          <section><h6>Microsoft Excel</h6></section>
-          <section><h6>SAS</h6></section>
-          <section><h6>Tableau Public</h6></section>
-          <section><h6>Stata</h6></section>
-          <section><h6>Nvivo.</h6></section>
         </section>
 
         <!--  -->
@@ -430,7 +476,7 @@ passengers1 <- passengers %>%
           </section>
           <section>
             <h2>Expresión en latex</h2>
-            <img src="./img/equation.png" />
+            <img width="80%" src="./img/equation.png" />
           </section>
           <section>
             <h2>Interfaz de linea de comandos</h2>
@@ -485,11 +531,33 @@ passengers1 <- passengers %>%
               <li>Publicación y compartición de documentos</li>
             </ol>
           </section>
-          <section>
-            <div>
-              <iframe data-src="https://es.overleaf.com/" data-preload ></iframe>
-            </div>
-          </section>
+        </section>
+        <section>
+          <h6>Fuentes consultadas</h6>
+          <ul style="column-count: 2">
+            <li>
+              <a href="https://pypi.org/">PiPy</a>
+            </li>
+            <li>
+              <a href="https://pandas.pydata.org/docs/">Pandas</a>
+            </li>
+
+            <li>
+              <a href="https://cran.r-project.org">CRAN</a>
+            </li>
+            <li>
+              <a href="https://www.tidyverse.org/packages/">Tidyverse</a>
+            </li>
+            <li>
+              <a href="https://es.overleaf.com">Overleaf</a>
+            </li>
+            <li>
+              <a
+                href="https://www.kaggle.com/code/varimp/a-mostly-tidyverse-tour-of-the-titanic"
+                >Kaggle</a
+              >
+            </li>
+          </ul>
         </section>
       </div>
     </div>
